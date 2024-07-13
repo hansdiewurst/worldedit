@@ -19583,7 +19583,6 @@ module.exports = function(db, opts) {
 	};
 
 	fs.readFile = function(key, opts, cb) {
-		console.log("read called");
 		if (typeof opts === 'function') return fs.readFile(key, null, opts);
 		if (typeof opts === 'string') opts = {encoding:opts};
 		if (!opts) opts = {};
@@ -19597,7 +19596,7 @@ module.exports = function(db, opts) {
 
 			var blob = stat && stat.blob || key;
 			bl.read(blob, function(err, data) {
-				console.log("read:", opts.encoding, blob, key);
+				window.idk = [opts.encoding,blob,key]
 				if (err) return cb(err);
 				cb(null, opts.encoding ? data.toString(opts.encoding) : data);
 			});

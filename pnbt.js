@@ -28643,7 +28643,6 @@ exports.equal = equal;
 exports.escapeComponent = escapeComponent;
 exports.unescapeComponent = unescapeComponent;
 
-window.a = exports;
 Object.defineProperty(exports, '__esModule', { value: true });
 
 })));

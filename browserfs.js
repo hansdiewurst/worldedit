@@ -19596,6 +19596,7 @@ module.exports = function(db, opts) {
 
 			var blob = stat && stat.blob || key;
 			bl.read(blob, function(err, data) {
+				console.log("read:", opts.encoding, blob, key);
 				if (err) return cb(err);
 				cb(null, opts.encoding ? data.toString(opts.encoding) : data);
 			});

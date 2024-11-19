@@ -16573,7 +16573,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":5,"call-bind":12,"call-bind/callBound":11,"for-each":23,"gopd":27,"has-tostringtag/shams":32}],81:[function(require,module,exports){
 var zlib = require('zlib');
 
-var Mca = module.exports = function(data, layout)
+window.Mca = module.exports = function(data, layout)
 {
 	this.data = data;
 	this.layout = layout || Mca.defaultLayout;
